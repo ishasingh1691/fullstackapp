@@ -1,0 +1,6 @@
+{
+    "mongoDbURI": "mongodb+srv://ishaingh16:ishasingh16@mydb.5qy6i.mongodb.net/mydb?retryWrites=true&w=majority",
+    "jwtPrivateKey": "myPrivateKey",
+    "githubCliendId": "2b2273e80597705184df",
+    "githubSecret": "181658277540610c9627bbf3dec6f59652788fb4"
+}
