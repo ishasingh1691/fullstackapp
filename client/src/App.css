@@ -1,6 +1,6 @@
 /* Global Styles */
 :root {
-  --primary-color: #17a2b8;
+  --primary-color: #ee0f6f;
   --dark-color: #343a40;
   --light-color: #f4f4f4;
   --danger-color: #dc3545;
@@ -42,6 +42,8 @@ img {
   padding: 0 2rem;
   margin-top: 6rem;
   margin-bottom: 3rem;
+  width: 100%;
+  
 }
 
 /* Text Styles*/
@@ -229,7 +231,7 @@ img {
 
 /* Overlay */
 .dark-overlay {
-  background-color: rgba(0, 0, 0, 0.7);
+  /* background-color: rgba(0, 0, 0, 0.7); */
   position: absolute;
   top: 0;
   left: 0;
@@ -311,7 +313,6 @@ button {
   z-index: 1;
   width: 100%;
   top: 0;
-  border-bottom: solid 1px var(--primary-color);
   opacity: 0.9;
 }
 
@@ -338,11 +339,13 @@ button {
   position: relative;
   background: url('./img/showcase.jpg') no-repeat center center/cover;
   height: 100vh;
+  width: 100%;
+  float: left;
 }
 
 .landing-inner {
   color: #fff;
-  height: 100%;
+  height: 70%;
   width: 80%;
   margin: auto;
   display: flex;
@@ -577,4 +580,77 @@ button {
   .post button {
     padding: 0.3rem 0.4rem;
   }
+}
+
+.landing-inner h3{
+  color: #fff;
+  font-weight: 300;
+  font-size: 30px;
+}
+
+.landing-inner h1{
+  font-weight: 500;
+}
+
+.pink-btn{
+  background: rgba(0, 0, 0, 0) linear-gradient(to right, #ee0f6f 0%, #f89482 100%) repeat scroll 0 0;
+  color: #fff !important;
+  
+}
+
+.btn{
+  border-radius: 100px;
+  color: #272D3B;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1;
+  outline: 0 none;
+  padding: 13px 30px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  z-index: 1;
+  border: none !important;
+  min-width: 130px;
+}
+
+
+.form-container{
+  margin: 0 auto;
+  padding: 10px 20px;
+  width: 70%;
+}
+
+.form-container input{
+  border: 1px solid #ccc;
+  height: 50px;
+  border-radius: 20px;
+  padding: 5px 20px !important;
+}
+
+.text-center{
+  text-align: center;
+}
+
+p.lead{
+  color: #fff;
+}
+
+.white-color{
+  color: #fff;
+}
+
+.align-center{
+  margin: 0 auto;
+}
+
+.login-container h1{
+  color: #fff;
+  font-weight: 300;
+  font-size: 50px;
+}
+
+
+.login-container p{
+  margin-bottom: 0;
 }

@@ -28,15 +28,17 @@ const Login = (props) => {
 
   return (
     <Fragment>
-      <section className="container" onSubmit={onFormSubmit}>
-          
+      <section className="landing login-container" onSubmit={onFormSubmit}>
+          <div className="container">
         { props.alertdata.msg &&
             <div className="alert alert-danger">Invalid credentials</div>
         }
-        <h1 className="large text-primary">Sign In</h1>
-        <p className="lead">
-          <i className="fas fa-user"></i> Sign into Your Account
+        <h1 className="large text-center">SIGN IN</h1>
+        <p className="lead text-center">
+          <i className="fas fa-user"></i> SIGN IN TO YOUR ACCOUNT
         </p>
+        <div className="form-container">
+        
         <form className="form" action="dashboard.html">
           <div className="form-group">
             <input
@@ -57,11 +59,14 @@ const Login = (props) => {
               onChange = {e =>  formOnChange(e)}
             />
           </div>
-          <input type="submit" className="btn btn-primary" value="Login" />
-        </form>
-        <p className="my-1">
+          <input type="submit" className="btn btn-primary pink-btn align-center" value="Login" />
+          <p className="my-1 text-center white-color pull-right">
           Don't have an account? <Link to="/register">Sign Up</Link>
         </p>
+        </form>
+        
+        </div>
+        </div>
       </section>
     </Fragment>
   );

@@ -39,11 +39,11 @@ const Register = (props) => {
         <Alert message = {props.alertMsg.msg} type = {props.alertMsg.type}></Alert>
       }
     
-      <section className="container">
-        <h1 className="large text-primary">Sign Up</h1>
-        <p className="lead">
-          <i className="fas fa-user"></i> Create Your Account
-        </p>
+      <section className="landing login-container">
+        <div className="container">
+        <h1 className="large text-center">SIGN UP</h1>
+        
+        <div className="form-container">
         <form className="form" onSubmit={e => formSubmit(e)}>
           <div className="form-group">
             <input type="text" placeholder="Name" name="name" value={formData.name} onChange = {e => setFormState(e)}  required />
@@ -75,11 +75,13 @@ const Register = (props) => {
               minLength="6"
             />
           </div>
-          <input type="submit" className="btn btn-primary" value="Register" />
-        </form>
-        <p className="my-1">
+          <input type="submit" className="btn btn-primary pink-btn align-center" value="Register" />
+          <p className="my-1 pull-right white-color">
           Already have an account? <Link to="/login">Sign In</Link>
         </p>
+        </form>
+        </div>
+        </div>
       </section>
     </Fragment>
   );
