@@ -6,6 +6,7 @@ import {alert_action} from '../../actions/alert'
 import PropTypes from 'prop-types';
 
 
+
 const Login = (props) => {
   const [loginData, setLoginData] = useState({
     email: "",
@@ -38,7 +39,7 @@ const Login = (props) => {
           <i className="fas fa-user"></i> SIGN IN TO YOUR ACCOUNT
         </p>
         <div className="form-container">
-        
+      
         <form className="form" action="dashboard.html">
           <div className="form-group">
             <input
@@ -64,7 +65,6 @@ const Login = (props) => {
           Don't have an account? <Link to="/register">Sign Up</Link>
         </p>
         </form>
-        
         </div>
         </div>
       </section>

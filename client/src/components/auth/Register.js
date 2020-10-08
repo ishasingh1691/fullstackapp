@@ -41,7 +41,7 @@ const Register = (props) => {
     
       <section className="landing login-container">
         <div className="container">
-        <h1 className="large text-center">SIGN UP</h1>
+        <h1 className="large text-center m-0">SIGN UP</h1>
         
         <div className="form-container">
         <form className="form" onSubmit={e => formSubmit(e)}>

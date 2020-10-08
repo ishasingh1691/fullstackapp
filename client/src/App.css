@@ -654,3 +654,11 @@ p.lead{
 .login-container p{
   margin-bottom: 0;
 }
+
+input:focus{
+  outline: none;
+}
+
+.m-0{
+  margin-bottom: 0;
+}
