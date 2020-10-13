@@ -1,4 +1,4 @@
-import {LOGIN_ACTION, LOGOUT_ACTION, GET_LOGGEDIN_USER_ACTION} from '../actions/types'
+import {LOGIN_ACTION, LOGOUT_ACTION} from '../actions/types'
 
 
 const INITIAL_STATE = {
@@ -9,11 +9,9 @@ const INITIAL_STATE = {
 export const loginReducer = (state = INITIAL_STATE, action) => {
     switch(action.type){
         case LOGIN_ACTION:
-            return {...state, token: action.payload.token, name: action.payload.name, email:action.payload.email, avatar:action.payload.avatar, isLoggedIn: true}
+            return {...state, token:action.payload.token, data:{name: action.payload.name, avatar: action.payload.avatar, email: action.payload.email}, isLoggedIn: true}
         case LOGOUT_ACTION:
-            return {...state, token: '', isLoggedIn: false}
-        case GET_LOGGEDIN_USER_ACTION:
-            return {...state, user:action.payload}
+            return {...state, isLoggedIn: false, data: null, token:null}
         default:
             return state
     }

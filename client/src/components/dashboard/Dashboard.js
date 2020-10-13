@@ -1,20 +1,29 @@
 import React, { Fragment, useEffect } from 'react'
-import {getLoggedInUserAction} from '../../actions/getUser'
 import {connect} from 'react-redux'
-import { Link } from 'react-router-dom'
+import { Link, Redirect } from 'react-router-dom'
+import {GetProfile} from '../../actions/profile'
+
 
 
 const Dashboard = (props) => {
   useEffect(() => {
-    // props.getLoggedInUserAction()
+    props.GetProfile()
   }, [])
+  
+if ( !props.profile) {
+    return <div class="loader"></div>
+}
+
+const {name} = props.profile.user
+
     return (
         <Fragment>
-             <section className="container">
+      <section className="dashboard-container">
+        <div className="container">
       <h1 className="large text-primary">
         Dashboard
       </h1>
-      <p className="lead"><i className="fas fa-user"></i> Welcome John Doe</p>
+    <p className="lead"><i className="fas fa-user"></i> Welcome {name.toUpperCase()}</p>
       <div className="dash-buttons">
         <Link to="/createProfile" className="btn btn-light"
           ><i className="fas fa-user-circle text-primary"></i> Edit Profile </Link>
@@ -97,9 +106,17 @@ const Dashboard = (props) => {
                 Delete My Account
             </button>
           </div>
+          </div>
     </section>
         </Fragment>
     )
 }
 
-export default connect(null, {getLoggedInUserAction})(Dashboard)
+const mapStateToProps = (state) => {
+  console.log(state.profile)
+    return {
+        profile: state.profile.userProfile
+    }
+}
+
+export default connect(mapStateToProps, {GetProfile})(Dashboard)

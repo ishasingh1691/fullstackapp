@@ -21,13 +21,13 @@ router.get("/me", authMiddleware, async (req, res) => {
     });
 
     if (!profile) {
-      return res.status(400).json([{ err: { msg: "Profile not found" } }]);
+      return res.status(400).json({ msg: "Profile not found" });
     }
 
     res.status(200).send(profile);
   } catch (err) {
     console.log(err);
-    res.status(400).json([{ err: { msg: "Server Error" } }]);
+    res.status(400).json({ msg: "Server Error" });
   }
 });
 
